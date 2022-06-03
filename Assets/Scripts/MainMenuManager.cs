@@ -48,6 +48,7 @@ public class MainMenuManager : MonoBehaviour
             mainMenuPage.SetActive(false);
             SteamLobbyManager.instance.HostLobby();
             pauseMenuPage.SetActive(false);
+            steamPlayerInfo.SetActive(false);
         }
     }
 
@@ -66,5 +67,17 @@ public class MainMenuManager : MonoBehaviour
     {
         pauseMenuPage.SetActive(false);
         steamPlayerInfo.SetActive(false);
+    }
+
+    public void HideUI()
+    {
+        mainMenuPage.SetActive(false);
+        pauseMenuPage.SetActive(false);
+        steamPlayerInfo.SetActive(false);
+    }    
+
+    public void Invite()
+    {
+        SteamLobbyManager.instance.Invite();
     }
 }

@@ -51,6 +51,7 @@ public class SteamLobbyManager : MonoBehaviour
     {
         Debug.Log("RUNNING JOIN LOBBY: JOINING LOBBY WITH STEAM ID: " + lobbyID.ToString());
         SteamMatchmaking.JoinLobby(lobbyID);
+        MainMenuManager.instance.HideUI();
     }
 
     public void GetListOfLobbies()
@@ -160,5 +161,10 @@ public class SteamLobbyManager : MonoBehaviour
     public void OpenSteamOverlay()
     {
         SteamFriends.ActivateGameOverlay("Friends");
+    }
+
+    public void Invite()
+    {
+        SteamFriends.ActivateGameOverlayInviteDialog((CSteamID)current_lobbyID);
     }
 }

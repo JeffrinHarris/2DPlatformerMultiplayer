@@ -28,32 +28,40 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         GroundCheck();
+
+        if(isGrounded) _anim.SetBool("inAir",false);
+        else _anim.SetBool("inAir",true);
         
         direction = Input.GetAxis("Horizontal");
 
         if (direction > 0f)
+        {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
-
+            _anim.SetBool("isMoving",true);
+            _anim.SetBool("IsRight",true);
+        }
         else if (direction < 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            _anim.SetBool("isMoving",true);
+            _anim.SetBool("IsRight",false);
         }
         else
         {
             player.velocity = new Vector2(0, player.velocity.y);
+            _anim.SetBool("isMoving",false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-            Debug.Log("JUMP DA BOB");
         }
     }
 

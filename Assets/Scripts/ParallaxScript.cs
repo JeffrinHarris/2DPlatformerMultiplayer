@@ -10,13 +10,16 @@ public class ParallaxScript : MonoBehaviour
 
     private Vector3 currentPos;
     private Vector3 camPos;
+
+    [SerializeField]
     private float width;
 
     void Start()
     {
         currentPos = GetComponent<Transform>().position;
         camPos = cam.GetComponent<Transform>().position;
-        width = GetComponent<SpriteRenderer>().bounds.size.x/2f;
+        //width = GetComponent<SpriteRenderer>().bounds.size.x/2f;
+        width = 10.5f;
     }
 
     void Update()

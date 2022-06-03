@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 0.2
   cam: {fileID: 519420028}
+  width: 0
 --- !u!1 &143656982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,13 +1647,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &525173378
 PrefabInstance:
@@ -1717,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: a7fddf03e0c8cba4ab5cc89cfedfc849, type: 2}
+    - target: {fileID: 6577261436972174699, guid: 63a50739d8a6b274c843484690a5dc84, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a50739d8a6b274c843484690a5dc84, type: 3}
 --- !u!1 &560848751
@@ -1820,6 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 1
   cam: {fileID: 519420028}
+  width: 0
 --- !u!1 &589409619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2018,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686338691
 GameObject:
@@ -2115,6 +2121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 0.1
   cam: {fileID: 519420028}
+  width: 0
 --- !u!1 &698610796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 0.5
   cam: {fileID: 519420028}
+  width: 0
 --- !u!1 &1808313189
 GameObject:
   m_ObjectHideFlags: 0

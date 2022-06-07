@@ -101,6 +101,7 @@ public class SteamLobbyManager : MonoBehaviour
 
         networkManager.networkAddress = hostAddress;
         networkManager.StartClient();
+        MainMenuManager.instance.HideUI();
     }
 
     private void OnGetLobbiesList(LobbyMatchList_t result)

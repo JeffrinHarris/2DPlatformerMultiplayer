@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class SteamPlayerInfo : MonoBehaviour
 {
-    [SerializeField]
     private TMP_Text playerNameText;
-    [SerializeField]
     private RawImage playerProfilePhoto;
 
     protected Callback<AvatarImageLoaded_t> avatarImageLoaded;
@@ -19,6 +17,10 @@ public class SteamPlayerInfo : MonoBehaviour
 
     private void Start()
     {
+
+        playerNameText = GetComponentInChildren<TMP_Text>();
+        playerProfilePhoto = GetComponentInChildren<RawImage>();
+
         if (SteamManager.Initialized)
         {
             string name = SteamFriends.GetPersonaName();

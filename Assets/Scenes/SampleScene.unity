@@ -2993,6 +2993,7 @@ GameObject:
   - component: {fileID: 709383891}
   - component: {fileID: 709383893}
   - component: {fileID: 709383892}
+  - component: {fileID: 709383894}
   m_Layer: 5
   m_Name: SteamPlayerInfo
   m_TagString: Untagged
@@ -3060,6 +3061,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709383890}
   m_CullTransparentMesh: 1
+--- !u!114 &709383894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709383890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fd889cbd538a14e9e98cb41e311f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &764562562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,7 +3772,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1032215984}
   - component: {fileID: 1032215983}
-  - component: {fileID: 1032215985}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -3797,20 +3809,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1032215985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032215982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fd889cbd538a14e9e98cb41e311f24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNameText: {fileID: 1109777077}
-  playerProfilePhoto: {fileID: 164838518}
 --- !u!1 &1089167365
 GameObject:
   m_ObjectHideFlags: 0

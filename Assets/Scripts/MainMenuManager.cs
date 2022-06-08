@@ -12,6 +12,8 @@ public class MainMenuManager : MonoBehaviour
     private GameObject pauseMenuPage;
     [SerializeField]
     private GameObject steamPlayerInfo;
+    [SerializeField]
+    private GameObject faceChooser;
 
     private void Awake()
     {
@@ -24,20 +26,15 @@ public class MainMenuManager : MonoBehaviour
         mainMenuPage.SetActive(true);
         pauseMenuPage.SetActive(false);
         steamPlayerInfo.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        faceChooser.SetActive(true);
     }
 
     public void QuitGame()
     {
         Application.Quit();
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #endif
     }
 
     public void HostGame()
@@ -49,6 +46,7 @@ public class MainMenuManager : MonoBehaviour
             SteamLobbyManager.instance.HostLobby();
             pauseMenuPage.SetActive(false);
             steamPlayerInfo.SetActive(false);
+            faceChooser.SetActive(false);
         }
     }
 
@@ -61,12 +59,14 @@ public class MainMenuManager : MonoBehaviour
     {
         pauseMenuPage.SetActive(true);
         steamPlayerInfo.SetActive(true);
+        faceChooser.SetActive(true);
     }
 
     public void ResumeGame()
     {
         pauseMenuPage.SetActive(false);
         steamPlayerInfo.SetActive(false);
+        faceChooser.SetActive(false);
     }
 
     public void HideUI()
@@ -74,6 +74,7 @@ public class MainMenuManager : MonoBehaviour
         mainMenuPage.SetActive(false);
         pauseMenuPage.SetActive(false);
         steamPlayerInfo.SetActive(false);
+        faceChooser.SetActive(false);
     }    
 
     public void Invite()

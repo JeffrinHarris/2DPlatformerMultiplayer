@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
 using SimpleFileBrowser;
 
 public class FaceChooserScript : MonoBehaviour
@@ -19,7 +18,7 @@ public class FaceChooserScript : MonoBehaviour
         FileBrowser.SetDefaultFilter(".png");
         FileBrowser.Skin = skin;
     }   
-
+    
     public void ChooseFace()
     {
         FileBrowser.ShowLoadDialog((paths) => fileSelected(paths), () => fileCancelled(),FileBrowser.PickMode.FilesAndFolders,false,null,null,"Choose a Face","Select Face");
@@ -35,6 +34,8 @@ public class FaceChooserScript : MonoBehaviour
         tex.LoadImage(bytes);
 
         face.texture = tex;
+
+        PlayerDataHandler.playerFace = face;
     }
 
     private void fileCancelled()

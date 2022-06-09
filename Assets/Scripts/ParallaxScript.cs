@@ -27,6 +27,8 @@ public class ParallaxScript : MonoBehaviour
         float posDiff = cam.GetComponent<Transform>().position.x - camPos.x;
         float newPos = currentPos.x + amount*posDiff;
 
+        float camPosY = cam.GetComponent<Transform>().position.y;
+
         float posChange = camPos.x - newPos;
 
         if(posChange > width)
@@ -35,7 +37,7 @@ public class ParallaxScript : MonoBehaviour
         if(posChange < -1f*width)
             newPos -= width*2;
 
-        GetComponent<Transform>().position = new Vector3(newPos,currentPos.y, currentPos.z);
+        GetComponent<Transform>().position = new Vector3(newPos,camPosY, currentPos.z);
 
 
 

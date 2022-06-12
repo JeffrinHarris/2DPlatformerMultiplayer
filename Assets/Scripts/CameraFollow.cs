@@ -9,7 +9,6 @@ public class CameraFollow : MonoBehaviour
     public float offsetY;
 
     public Transform parentObject;
-    public GameObject prefab;
 
     private Transform _transform;
     
@@ -18,8 +17,11 @@ public class CameraFollow : MonoBehaviour
         this.transform.position = new Vector3(followTransform.position.x, followTransform.position.y + offsetY, this.transform.position.z);
         //copy gameobject position
         // parentObject.position = prefab.transform.position;
-        _transform = GameObject.Find("LocalPlayer").transform;
-        parentObject.position = _transform.position;
+        if(GameObject.Find("LocalPlayer"))
+        {
+            _transform = GameObject.Find("LocalPlayer").transform;
+            parentObject.position = _transform.position;
+        }
         
     }
 }

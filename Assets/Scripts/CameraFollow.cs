@@ -13,12 +13,6 @@ public class CameraFollow : MonoBehaviour
 
     private Transform _transform;
     
-    // void start()
-    // {
-    //     parentObject = GameObject.Find("ParentObject").transform;
-    //     prefab = GameObject.Find("Prefab");
-    // }
-    // Update is called once per frame
     void FixedUpdate()
     {
         this.transform.position = new Vector3(followTransform.position.x, followTransform.position.y + offsetY, this.transform.position.z);
